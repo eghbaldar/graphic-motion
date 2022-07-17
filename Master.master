@@ -1,0 +1,120 @@
+﻿<%@ Master Language="VB" CodeFile="Master.master.vb" Inherits="Master" %>
+<%@ Register Src="usercontrol/Menu.ascx" TagName="Menu" TagPrefix="uc1" %>
+<%@ Register Src="usercontrol/Footer.ascx" TagName="Footer" TagPrefix="uc2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server" id="mainHead">
+<title>مرکز گسترش جلوه‌های تصویری | آموزش‌های تخصصی تصویری</title>
+<link rel="icon" href="Content/img/icon.png">
+<link href='https://plus.google.com/113521349599475517616' rel="publisher' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="ROBOTS" content="ALL" />
+<meta name="Generator" content="Copyright (C) 2016 Content Management System. All rights reserved." />
+<meta name="Copyright" content="Copyright (c) 2016 graphic-motion.ir, Graphic Motion" />
+<meta name="Author" content="Designed &amp; Developed by Alimohammad Eghbaldar [eghbaldar.ir]" />
+<meta name="Rating" content="General" />
+<meta name="revisit-after" content="1 Days" />
+<script>    (function (d, e, j, h, f, c, b) { d.GoogleAnalyticsObject = f; d[f] = d[f] || function () { (d[f].q = d[f].q || []).push(arguments) }, d[f].l = 1 * new Date(); c = e.createElement(j), b = e.getElementsByTagName(j)[0]; c.async = 1; c.src = h; b.parentNode.insertBefore(c, b) })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga"); ga("create", "UA-80506589-1", "auto"); ga("send", "pageview");</script>
+<link href="Content/CSS/Main.css" rel="stylesheet" type="text/css" />
+<link href="Content/Menu/css/menu.css" rel="stylesheet" type="text/css" />
+<asp:ContentPlaceHolder ID="head" runat="server">
+</asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="form1" runat="server">
+<div id="body">
+<div style="background-color:#121212;padding:5px;color:White;font:normal 12px koodak;margin-bottom:1px">
+<table>
+<tr>
+<td>
+<div style="padding:4px;border:0px solid #2968a8;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;box-shadow:.5px .5px .5px .5px white;">
+<a href="<%= Page.ResolveUrl("~/سبد-خرید") %>" style="text-decoration:none;color:White">سبد خرید</a></div>
+</td>
+<td>
+<a href="<%= Page.ResolveUrl("~/درباره-مرکز-گسترش-جلوه-های-تصویری") %>" style="text-decoration:none;color:White">
+<img src="<%= Page.ResolveUrl("~/Content/img/info.png") %>" alt="توضیحات" title="درباره"/>
+</a>
+</td>
+<td>
+<div>
+<a href="<%= Page.ResolveUrl("~/درباره-مرکز-گسترش-جلوه-های-تصویری") %>" style="text-decoration:none;color:White">درباره مرکز گسترش جلوه‌های تصویری</a>
+</div>
+</td>
+<td>
+<div id="search">
+<table>
+<tr>
+<td>
+<asp:ImageButton ID="btnSearch" ImageUrl="~/Content/img/search.png" runat="server" />
+</td>
+<td>
+<asp:TextBox ID="txtSearch" Style="font-family:Tahoma" runat="server" Width="245"></asp:TextBox>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="TopSite">
+<div id="headerSite">
+<img id="logoHead" src="<%= Page.ResolveUrl("~/Content/img/logoHead.png") %>" alt="توضیحات"/>
+</div>
+<div id="search_others">
+<table style="width:100%">
+<tr>
+<td>
+<div id="baste">
+</div>
+</td>
+<td>
+</td>
+<td>
+<div id="sabad_kharid">
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="menu">
+<uc1:Menu ID="Menu1" runat="server" />
+</div>
+<div id="adv">
+
+<table style="width:100%;">
+<tr>
+<td>
+<a href="http://graphic-motion.ir/%D8%AA%D9%85%D8%A7%D9%85%DB%8C-%D8%A8%D8%B3%D8%AA%D9%87-%D9%87%D8%A7%DB%8C-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C" target="_blank">
+<img src="<%= Page.ResolveUrl("~/Content/img/adv_com.jpg") %>" alt="توضیحات" title="خرید"/>
+</a>
+</td>
+<td>
+<a href="http://graphic-motion.ir/خبرنامه" target="_blank">
+<img src="<%= Page.ResolveUrl("~/Content/img/newsletter.png") %>" alt="توضیحات" title="دانلود"/>
+<a />
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+<div style="background-color:#3B3C40;border-top:1px solid #ABB1C1;border-bottom:1px solid #ABB1C1;background-image:url('Content/img/bgSlider.jpg');">
+<asp:ContentPlaceHolder ID="Up" runat="server">
+</asp:ContentPlaceHolder>
+</div>
+
+<div id="center">
+<asp:ContentPlaceHolder ID="Down" runat="server">
+</asp:ContentPlaceHolder>
+</div>
+<div id="footer">
+<uc2:Footer ID="Footer1" runat="server" />
+</div>
+</div>
+</form>
+</body>
+
+</html>

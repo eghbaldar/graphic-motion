@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /Management
+Disallow: /Management/Login
+Disallow: /Management/Login/Default.aspx
+Disallow: /Management/pages
+Disallow: /Management/pages/Category.aspx
+Disallow: /Management/pages/Comment.aspx
+Disallow: /Management/pages/Default.aspx
+Disallow: /Management/pages/Editing.aspx
+Disallow: /Management/pages/EditPhoto.aspx
+Disallow: /Management/pages/learning.aspx
+Disallow: /Management/pages/request_contact.aspx
+Disallow: /Management/pages/Statistic.aspx
+Disallow: /Management/pages/user.aspx
+
+
+

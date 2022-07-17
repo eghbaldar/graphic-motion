@@ -1,0 +1,538 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0054)http://p2p.dotnetsource.com/Default.aspx?g=posts&t=483 -->
+<HTML dir=rtl><HEAD><TITLE id=ForumTitle>آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP.Net - دات نت سورس</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<SCRIPT 
+src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/PopBox.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT type=text/javascript>
+    popBoxWaitImage.src = "/images/spinner40.gif";
+    popBoxRevertImage = "/images/magminus.gif";
+    popBoxPopImage = "/images/magplus.gif";
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+    function dosmth2(object)
+    {
+            if(object.width>800 || object.height>600)
+           {
+            object.width=160;
+            object.height=120;                                              
+            object.pbshowcaption=true;
+            object.pbcaption=object.alt;
+            object.pbshowpopbar=true;
+            object.title=object.alt;            
+            object.onclick = function(){ Pop(this,50,'PopBoxImageLarge'); }    
+            //object.style.border="none 1px white";
+            //object.style.cursor="url('http://www.c6software.com/images/magplus.cur'), pointer;";
+           }
+        
+    }
+</SCRIPT>
+
+<META content="professional Programming website" name=Description>
+<META 
+content=".Net , SQL Server , C# VB.Net ASP.Net Ajax Ebook Magazine Component , دات نت, اسکیوال سرور , سی شارپ" 
+name=Keywords><!-- If you don't want the forum to set the page title, you can remove runat and id --><LINK 
+href="images/favicon.ico" rel="ShortCut Icon">
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY style="TEXT-ALIGN: justify">
+<DIV style="WIDTH: 100%" align=center><IMG id=imgBanner dir=rtl 
+style="FONT-SIZE: 14pt" 
+src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/DotNetSourceLogo.gif" 
+align=middle> </DIV><BR>
+<DIV style="TEXT-ALIGN: center"><A style="TEXT-ALIGN: center" 
+href="http://www.p2p.dotnetsource.com/Default.aspx?g=posts&amp;t=7934"><IMG 
+alt="SQL server 2008" 
+src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/SQLserevr2008ad.gif"> 
+</A></DIV><BR>
+<FORM id=_ctl0 name=_ctl0 action=Default.aspx?g=posts&amp;t=483 method=post 
+encType=multipart/form-data><INPUT id=__EVENTTARGET type=hidden 
+name=__EVENTTARGET> <INPUT id=__EVENTARGUMENT type=hidden name=__EVENTARGUMENT> 
+<INPUT id=__VIEWSTATE type=hidden 
+value=/wEPDwULLTE4NDQzNDk4NzQPZBYGAgEPFgIeCWlubmVyaHRtbAWWAdii2b7ZhNmI2K8g2Ygg2q/YsNin2LTYqtmGINi52YPYsyDYr9ixINiq2KfZvtmK2YMg2KjYpyBmY2tlZGl0b3IgLSDYs9mI2KfZhNin2KrYjCDZhdi02qnZhNin2Kog2Ygg2LHYp9mHINit2YQg2YfYpyDYr9ixIEFTUC5OZXQgLSDYr9in2Kog2YbYqiDYs9mI2LHYs2QCAw8WAh4Dc3JjBSMvdGhlbWVzL3lhZnByby9Eb3ROZXRTb3VyY2VMb2dvLmdpZmQCBQ9kFgICAQ9kFgJmDw8WAh4OQ3VycmVudE1lc3NhZ2UC5xFkFjYCAQ8WAh4EZGF0YTLzDwABAAAA/////wEAAAAAAAAADAIAAABOU3lzdGVtLkRhdGEsIFZlcnNpb249Mi4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAVU3lzdGVtLkRhdGEuRGF0YVRhYmxlAwAAABlEYXRhVGFibGUuUmVtb3RpbmdWZXJzaW9uCVhtbFNjaGVtYQtYbWxEaWZmR3JhbQMBAQ5TeXN0ZW0uVmVyc2lvbgIAAAAJAwAAAAYEAAAA2gU8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtMTYiPz4NCjx4czpzY2hlbWEgeG1sbnM9IiIgeG1sbnM6eHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIiB4bWxuczptc2RhdGE9InVybjpzY2hlbWFzLW1pY3Jvc29mdC1jb206eG1sLW1zZGF0YSI+DQogIDx4czplbGVtZW50IG5hbWU9IlRhYmxlMSI+DQogICAgPHhzOmNvbXBsZXhUeXBlPg0KICAgICAgPHhzOnNlcXVlbmNlPg0KICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJUaXRsZSIgdHlwZT0ieHM6c3RyaW5nIiBtc2RhdGE6dGFyZ2V0TmFtZXNwYWNlPSIiIG1pbk9jY3Vycz0iMCIgLz4NCiAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0iVVJMIiB0eXBlPSJ4czpzdHJpbmciIG1zZGF0YTp0YXJnZXROYW1lc3BhY2U9IiIgbWluT2NjdXJzPSIwIiAvPg0KICAgICAgPC94czpzZXF1ZW5jZT4NCiAgICA8L3hzOmNvbXBsZXhUeXBlPg0KICA8L3hzOmVsZW1lbnQ+DQogIDx4czplbGVtZW50IG5hbWU9InRtcERhdGFTZXQiIG1zZGF0YTpJc0RhdGFTZXQ9InRydWUiIG1zZGF0YTpNYWluRGF0YVRhYmxlPSJUYWJsZTEiIG1zZGF0YTpVc2VDdXJyZW50TG9jYWxlPSJ0cnVlIj4NCiAgICA8eHM6Y29tcGxleFR5cGU+DQogICAgICA8eHM6Y2hvaWNlIG1pbk9jY3Vycz0iMCIgbWF4T2NjdXJzPSJ1bmJvdW5kZWQiIC8+DQogICAgPC94czpjb21wbGV4VHlwZT4NCiAgPC94czplbGVtZW50Pg0KPC94czpzY2hlbWE+BgUAAADsBzxkaWZmZ3I6ZGlmZmdyYW0geG1sbnM6bXNkYXRhPSJ1cm46c2NoZW1hcy1taWNyb3NvZnQtY29tOnhtbC1tc2RhdGEiIHhtbG5zOmRpZmZncj0idXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTp4bWwtZGlmZmdyYW0tdjEiPg0KICA8dG1wRGF0YVNldD4NCiAgICA8VGFibGUxIGRpZmZncjppZD0iVGFibGUxMSIgbXNkYXRhOnJvd09yZGVyPSIwIiBkaWZmZ3I6aGFzQ2hhbmdlcz0iaW5zZXJ0ZWQiPg0KICAgICAgPFRpdGxlPtiv2KfYqiDZhtiqINiz2YjYsdizPC9UaXRsZT4NCiAgICAgIDxVUkw+L0RlZmF1bHQuYXNweD9nPWZvcnVtPC9VUkw+DQogICAgPC9UYWJsZTE+DQogICAgPFRhYmxlMSBkaWZmZ3I6aWQ9IlRhYmxlMTIiIG1zZGF0YTpyb3dPcmRlcj0iMSIgZGlmZmdyOmhhc0NoYW5nZXM9Imluc2VydGVkIj4NCiAgICAgIDxUaXRsZT7YqtmI2LPYudmHINio2LHZhtin2YXZhyDZh9in24wg2YjYqCAtIEFTUC5ORVQ8L1RpdGxlPg0KICAgICAgPFVSTD4vRGVmYXVsdC5hc3B4P2c9Zm9ydW0mYW1wO2M9MzwvVVJMPg0KICAgIDwvVGFibGUxPg0KICAgIDxUYWJsZTEgZGlmZmdy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 
+name=__VIEWSTATE>
+<SCRIPT type=text/javascript>
+<!--
+var theForm = document.forms['_ctl0'];
+if (!theForm) {
+    theForm = document._ctl0;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+// -->
+</SCRIPT>
+
+<SCRIPT language=javascript 
+src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/resource.ashx"></SCRIPT>
+
+<SCRIPT 
+src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/prototype.ashx" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/core.ashx" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/converter.ashx" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/yaf.controls.ThankYou,yaf.ashx" 
+type=text/javascript></SCRIPT>
+ <LINK 
+href="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/forum.css" 
+type=text/css rel=stylesheet><LINK 
+href="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/theme.css" 
+type=text/css rel=stylesheet>
+<TABLE class=content cellSpacing=0 cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD class=post 
+    style="PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px" 
+    align=right><B>مهمان عزیز خوش آمدید</B></TD>
+    <TD class=post 
+    style="PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px" 
+    vAlign=center align=right><A 
+      href="http://p2p.dotnetsource.com/Default.aspx?g=search">جستجو</A> | <A 
+      href="http://p2p.dotnetsource.com/Default.aspx?g=active">تاپیک های 
+      فعال</A> | <A 
+      href="http://p2p.dotnetsource.com/Default.aspx?g=members">فهرست اعضـاء</A> 
+      | <A 
+      href="http://p2p.dotnetsource.com/Default.aspx?g=login&amp;ReturnUrl=%2fDefault.aspx%3fg%3dposts%2526t%3d483">ورود</A> 
+      | <A href="http://p2p.dotnetsource.com/Default.aspx?g=rules">ثبت 
+  نام</A></TD></TR></TBODY></TABLE><BR>
+<SCRIPT language=javascript type=text/javascript>
+var pStrMsId;
+var pstrMsgId;
+function changeBehave(Obj,strObj)
+{
+    if(document.getElementById(strObj).style.display=='none')
+    {
+        document.getElementById(strObj).style.display='block';
+        Obj.src='images/minus.gif'}else{document.getElementById(strObj).style.display='none';
+        Obj.src='images/plus.gif'
+    }
+}
+function addNewThanks(strMsId)
+{   showProg();
+    pStrMsId = strMsId;
+    yaf.controls.ThankYou.InsertThankYou(strMsId,InsertThankYou_CallBack);
+}
+function InsertThankYou_CallBack(res)
+{
+    if (res != null)
+    {
+        document.getElementById("dvThankBox" + pStrMsId).innerHTML = "<a href=\"javascript:void(0);\" onclick=\"deleteThanks('" + pStrMsId + "')\">" + String(yaf.controls.ThankYou.GetString("THANK_DELETE").value) + "</a>";
+        thankYouStatus(pStrMsId);}else{alert(String(res.error.Message));
+    } 
+    HideProg();
+}
+function deleteThanks(strMsgId)
+{
+    showProg();
+    pstrMsgId = strMsgId;
+    yaf.controls.ThankYou.Thank_Delete(strMsgId,Thank_Delete_CallBack);
+
+}
+function Thank_Delete_CallBack(res)
+{
+    if (res != null)
+    {
+        document.getElementById("dvThankBox" + pstrMsgId).innerHTML = "<a href=\"javascript:void(0);\" onclick=\"addNewThanks('" + pstrMsgId + "')\">" +  String(yaf.controls.ThankYou.GetObject("THANKSME").value) + "</a>";thankYouStatus(pstrMsgId);}else{alert(String(res.error.Message));}}function  thankYouStatus(pstrMsgId){var res = yaf.controls.ThankYou.GetStatus(pstrMsgId);if(res != null){var resArray = new Array();resArray = String(res.value).split("|");document.getElementById("dvThankStatus" + pstrMsgId).innerHTML = resArray[0];document.getElementById("dvThankTos" + pstrMsgId).innerHTML = resArray[1];
+    }
+    HideProg();
+}
+function showProg(){
+var winW=600, winH=640;
+if (parseInt(navigator.appVersion)>3) 
+{
+    if (navigator.appName=="Netscape") 
+        {winW = window.innerWidth;winH = window.innerHeight;
+}
+if (navigator.appName.indexOf("Microsoft")!=-1) 
+{
+    winW = document.body.offsetWidth;winH = document.body.offsetHeight;
+}
+}
+document.getElementById("dvWaite").style.position = 'absolute';
+document.getElementById("dvWaite").style.left = (winW / 2) - 80;
+document.getElementById("dvWaite").style.top = (winH / 2) + parseInt(document.body.scrollTop);
+document.getElementById("dvWaite").style.visibility = 'visible';}
+function HideProg(){document.getElementById("dvWaite").style.visibility = 'hidden';
+}
+</SCRIPT>
+
+<P class=navlinks><A dir=rtl 
+href="http://p2p.dotnetsource.com/Default.aspx?g=forum">دات نت سورس</A> » <A 
+dir=rtl href="http://p2p.dotnetsource.com/Default.aspx?g=forum&amp;c=3">توسعه 
+برنامه های وب - ASP.NET</A> » <A dir=rtl 
+href="http://p2p.dotnetsource.com/Default.aspx?g=topics&amp;f=5">سوالات، مشکلات 
+و راه حل ها در ASP.Net</A> » <SPAN id=current>آپلود و گذاشتن عكس در تاپيك با 
+fckeditor</SPAN> </P><A name=top></A>
+<TABLE class=command dir=rtl cellSpacing=0 cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD style="WIDTH: 100%" noWrap align=right></TD>
+    <TD class=navlinks align=left></TD></TR></TBODY></TABLE>
+<TABLE class=content dir=rtl cellSpacing=1 cellPadding=0 width="100%" 
+align=center border=0>
+  <TBODY>
+  <TR>
+    <TD 
+    style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+    colSpan=3>
+      <TABLE class=header1 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR class=header1>
+          <TD class=header1Title><SPAN id=forum__ctl0_TopicTitle>آپلود و 
+            گذاشتن عكس در تاپيك با fckeditor</SPAN></TD>
+          <TD align=right><A id=forum__ctl0_MyTest 
+            onmouseover="yaf_mouseover('forum:_ctl0:MyTestMenu')" 
+            onclick="yaf_popit('forum:_ctl0:MyTestMenu')">گزینه ها</A> · <A 
+            id=forum__ctl0_View 
+            onmouseover="yaf_mouseover('forum:_ctl0:ViewMenu')" 
+            onclick="yaf_popit('forum:_ctl0:ViewMenu')">مشاهده</A> 
+      </TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD class=header1 colSpan=6><INPUT id=forum__ctl0_MiniSearch2_txtSearch 
+      onkeydown="if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {document.getElementById('forum:_ctl0:MiniSearch2:btnSearch').click();return false;}} else {return true}; " 
+      name=forum:_ctl0:MiniSearch2:txtSearch> <INPUT id=forum__ctl0_MiniSearch2_btnSearch type=submit value=جستجو name=forum:_ctl0:MiniSearch2:btnSearch> 
+    </TD></TR>
+  <TR class=header2>
+    <TD class=header2links align=right colSpan=3><A class=header2link 
+      id=forum__ctl0_PrevTopic 
+      href="javascript:__doPostBack('forum$_ctl0$PrevTopic','')">تاپیک قبلی</A> 
+      · <A class=header2link id=forum__ctl0_NextTopic 
+      href="javascript:__doPostBack('forum$_ctl0$NextTopic','')">تاپیک بعدی</A> 
+    </TD></TR>
+  <TR class=postheader>
+    <TD id=forum__ctl0_MessageList__ctl0__ctl0_NameCell width=140 colSpan=2><A 
+      name=2279><B dir=rtl><A id=forum__ctl0_MessageList__ctl0__ctl0_UserName 
+      href="http://p2p.dotnetsource.com/Default.aspx?g=profile&amp;u=261">programer</A></B></TD>
+    <TD width="80%">
+      <TABLE dir=rtl cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD class=postheader style="HEIGHT: 19px"><B>فرستاده شده در :</B> 
+            شنبه ۱۸ فروردين ۱۳۸۶ در ساعت 2:10 </TD>
+          <TD class=postheader style="HEIGHT: 19px" align=left><SPAN 
+            id=dvThankBoxBCAC15></SPAN></TD></TR></TBODY></TABLE></TD></TR>
+  <TR class=post>
+    <TD class=UserBox vAlign=top colSpan=2 height=100>
+      <P><IMG 
+      src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/Ordinary_User_03.gif" 
+      align=right></P><BR clear=all>رتبه: کاربر تازه وارد<BR clear=all><BR>زمان 
+      عضویت: ۱۳۸۶/۱/۷<BR>تعداد پست ها: 35<BR>تشکر: 0<BR>0 بار تشکر شده در 0 
+      پست<BR><BR><IMG 
+      src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/uoffline.gif"> 
+    </TD>
+    <TD class=message vAlign=top>
+      <DIV class=postdiv>سلام <BR>من تويه قسمتهايي مثل اخبار و مقالات سايت كه 
+      مديران مي خوان اخبار و يا مقالات و مطالب ديگر را وارد سايت كنند از 
+      fckeditor استفاده كردم و تنظيمات اون رو هم طبق مطالبي كه تويه سايتش گفته 
+      بود انجام دادم . به درستي كار مي كنه و مطالب رو مي تونم باهاش تويه ديتابيس 
+      ذخيره و بازيابي كنم . فقط تويه قسمت insert image اون مشكل دارم و هر كار مي 
+      كنم خطا مي ده و نميشه عكي رو انتخاب و اپلود كرد . <BR>پيغامهايي مبني بر 
+      اينكه كانكتور غير فعاله و يا منبه xml رو پيدا نمي كنه مي ده ( در صورتي كه 
+      تنظيمات اون طبق مطالب گفته شده تويه سايتشون انجام شده . ) <BR>اگه از 
+      دوستان كشي با اين اديتور كار مي كنه خواهش مي كنم منو راهنمايي كنه . <BR>در 
+      ضمن اگر كسي از دوستان با اديتور ديگه اي هم كه امكاناتش در حد همين fck باشه 
+      كار كرده و مي دونه كه جواب مي ده ممنون مي شم لينك دانلود و نحوه كار باهاش 
+      رو هم توضيح بده .<BR><BR>تشكر </DIV></TD></TR>
+  <TR class=postfooter>
+    <TD class=small colSpan=2><A href="javascript:scroll(0,0)">بازگشت به بالا 
+      </A></TD>
+    <TD class=postfooter>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD></TD>
+          <TD id=forum__ctl0_MessageList__ctl0__ctl0_AdminInfo noWrap 
+            align=left>&nbsp;</TD></TR></TBODY></TABLE></TD></TR>
+  <TR id=pTrThanks>
+    <TD class=UserBox 
+    style="PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px" 
+    vAlign=top colSpan=2>
+      <DIV id=dvThankStatusBCAC15 style="FONT-WEIGHT: bold"></DIV></TD>
+    <TD class=message 
+    style="PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px" 
+    vAlign=top>
+      <DIV id=dvThankTosBCAC15 align=right></DIV></TD></TR>
+  <TR class=postsep>
+    <TD style="HEIGHT: 5px" colSpan=3></TD></TR>
+  <TR class=postheader>
+    <TD id=forum__ctl0_MessageList__ctl1__ctl0_NameCell width=140 colSpan=2><A 
+      name=2281><B dir=rtl><A id=forum__ctl0_MessageList__ctl1__ctl0_UserName 
+      href="http://p2p.dotnetsource.com/Default.aspx?g=profile&amp;u=81">anubis_ir</A></B></TD>
+    <TD width="80%">
+      <TABLE dir=rtl cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD class=postheader style="HEIGHT: 19px"><B>فرستاده شده در :</B> 
+            شنبه ۱۸ فروردين ۱۳۸۶ در ساعت 10:12 </TD>
+          <TD class=postheader style="HEIGHT: 19px" align=left><SPAN 
+            id=dvThankBoxBCD615></SPAN></TD></TR></TBODY></TABLE></TD></TR>
+  <TR class=post_alt>
+    <TD class=UserBox vAlign=top colSpan=2 height=100>
+      <P><IMG 
+      src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/Continual_User_02.gif" 
+      align=right></P><BR clear=all>رتبه: کاربر دائمی<BR clear=all><BR>زمان 
+      عضویت: ۱۳۸۵/۱۲/۱۵<BR>تعداد پست ها: 153<BR>تشکر: 6<BR>58 بار تشکر شده در 36 
+      پست<BR><BR><IMG 
+      src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/uoffline.gif"> 
+    </TD>
+    <TD class=message vAlign=top>
+      <DIV class=postdiv>ديباگ اين مورد نسبتا وقت زيادي از من گرفت ولي خلاصه اش 
+      به صورت زير است:<BR><BR>دو فايل زير را باز كنيد و مسير ConfigUserFilesPath 
+      را درست كنيد<BR><BR>
+      <DIV class=code>&nbsp;<IMG style="CURSOR: hand" 
+      onclick="changeBehave(this,'77156c0')" 
+      src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/minus.gif">&nbsp;<B>کد:</B>
+      <DIV class=innercode id=77156c0 
+      dir=ltr>FCKeditor\editor\filemanager\upload\asp\config.asp<BR>FCKeditor\editor\filemanager\browser\default\connectors\asp\config.asp</DIV></DIV><BR><BR>مثلا:<BR>
+      <DIV class=code>&nbsp;<IMG style="CURSOR: hand" 
+      onclick="changeBehave(this,'ed63538')" 
+      src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/minus.gif">&nbsp;<B>کد:</B>
+      <DIV class=innercode id=ed63538 dir=ltr>ConfigUserFilesPath 
+      ="/appDirOnServer/UserFiles/"</DIV></DIV><BR><BR>نكته مهم:<BR>در ويندوز 
+      سرور 2003 اين نوع مسير دهي به دلايل امنيتي امكان پذير نيست.<BR>
+      <DIV class=code>&nbsp;<IMG style="CURSOR: hand" 
+      onclick="changeBehave(this,'07d0a21')" 
+      src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/minus.gif">&nbsp;<B>کد:</B>
+      <DIV class=innercode id=07d0a21 dir=ltr>ConfigUserFilesPath = 
+      "../../../../../UserFiles/"</DIV></DIV><BR><BR>سپس فايل زير را باز 
+كنيد<BR>
+      <DIV class=code>&nbsp;<IMG style="CURSOR: hand" 
+      onclick="changeBehave(this,'9eeda66')" 
+      src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/minus.gif">&nbsp;<B>کد:</B>
+      <DIV class=innercode id=9eeda66 
+      dir=ltr>FCKeditor\editor\filemanager\upload\asp\upload.asp</DIV></DIV><BR><BR>و 
+      اصلاح زير را در انتهاي فايل اعمال كنيد (مشخص است):<BR><BR>
+      <DIV class=code>&nbsp;<IMG style="CURSOR: hand" 
+      onclick="changeBehave(this,'715abc7')" 
+      src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/minus.gif">&nbsp;<B>کد:</B>
+      <DIV class=innercode id=715abc7 dir=ltr>SendResults sErrorNumber, 
+      "../../UserFiles/"+sFileName, sFileName, "" ' patched by 
+      me!!</DIV></DIV><BR><BR><BR></DIV></TD></TR>
+  <TR class=postfooter>
+    <TD class=small colSpan=2><A href="javascript:scroll(0,0)">بازگشت به بالا 
+      </A></TD>
+    <TD class=postfooter>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD></TD>
+          <TD id=forum__ctl0_MessageList__ctl1__ctl0_AdminInfo noWrap 
+            align=left>&nbsp;</TD></TR></TBODY></TABLE></TD></TR>
+  <TR id=pTrThanks>
+    <TD class=UserBox 
+    style="PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px" 
+    vAlign=top colSpan=2>
+      <DIV id=dvThankStatusBCD615 style="FONT-WEIGHT: bold"></DIV></TD>
+    <TD class=message 
+    style="PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px" 
+    vAlign=top>
+      <DIV id=dvThankTosBCD615 align=right></DIV></TD></TR>
+  <TR class=postsep>
+    <TD style="HEIGHT: 5px" colSpan=3></TD></TR>
+  <TR>
+    <TD class=header1 colSpan=6><INPUT id=forum__ctl0_MiniSearch1_txtSearch 
+      onkeydown="if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {document.getElementById('forum:_ctl0:MiniSearch1:btnSearch').click();return false;}} else {return true}; " 
+      name=forum:_ctl0:MiniSearch1:txtSearch> <INPUT id=forum__ctl0_MiniSearch1_btnSearch type=submit value=جستجو name=forum:_ctl0:MiniSearch1:btnSearch> 
+    </TD></TR>
+  <TR class=header2>
+    <TD colSpan=3>کاربرانی که این تاپیک را مشاهده می کنند</TD></TR>
+  <TR class=post>
+    <TD colSpan=3><A 
+      href="http://p2p.dotnetsource.com/Default.aspx?g=profile&amp;u=1">كاربر 
+      مهمان</A></TD></TR></TBODY></TABLE><BR>
+<TABLE class=command dir=rtl cellSpacing=0 cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD style="WIDTH: 100%" align=right></TD>
+    <TD class=navlinks align=left></TD></TR></TBODY></TABLE><BR>
+<TABLE dir=rtl cellSpacing=0 cellPadding=0 width="100%">
+  <TBODY>
+  <TR id=forum__ctl0_ForumJumpLine>
+    <TD align=right>پرش به <SELECT language=javascript 
+      id=forum:_ctl0:ForumJump1 
+      onchange="__doPostBack('forum$_ctl0$ForumJump1','')" 
+      name=forum:_ctl0:ForumJump1> <OPTION value=""></OPTION> <OPTION 
+        value="">اخبار و اعلانات</OPTION> <OPTION value=2>- اخبار و اعلانات 
+        سایت</OPTION> <OPTION value=14>- گفتگوی اعضاء و مدیران</OPTION> <OPTION 
+        value=15>- فروشگاه سایت</OPTION> <OPTION value=16>- آگهی های 
+        کاربران</OPTION> <OPTION value=3>- اخبار و تازه هاي دنياي فناوري اطلاعات 
+        - IT</OPTION> <OPTION value=48>--- اخبار و تازه های Microsoft</OPTION> 
+        <OPTION value=17>- گفتگوی آزاد</OPTION> <OPTION value=1>- تست</OPTION> 
+        <OPTION value="">مهندسی نرم افزار</OPTION> <OPTION value=76>- مهندسی نرم 
+        افزار</OPTION> <OPTION value=77>- الگوریتم های برنامه نویسی</OPTION> 
+        <OPTION value="">برنامه نویسی با زبان VB.Net</OPTION> <OPTION value=43>- 
+        سوالات، مشکلات و راه حل ها در VB.Net</OPTION> <OPTION value=44>- مقالات، 
+        نکته ها و ترفندها در VB.Net</OPTION> <OPTION value="">برنامه نویسی با 
+        زبان#C</OPTION> <OPTION value=61>- سوالات، مشکلات و راه حل ها در 
+        #C</OPTION> <OPTION value=65>- مقالات، نکته ها و ترفندهای #C</OPTION> 
+        <OPTION value="">توسعه برنامه های وب - ASP.NET</OPTION> <OPTION value=5 
+        selected>- سوالات، مشکلات و راه حل ها در ASP.Net</OPTION> <OPTION 
+        value=25>- برنامه نویسی Client-Side</OPTION> <OPTION value=28>- کاربرد 
+        AJAX در ASP.NET</OPTION> <OPTION value=35>- مقالات و مطالب مفید در باره 
+        Asp.Net و Web</OPTION> <OPTION value="">NET Framework.</OPTION> <OPTION 
+        value=12>- مسائل عمومی NET Framework.</OPTION> <OPTION value=34>- مقالات 
+        و مطالب مفید</OPTION> <OPTION value="">بانک های اطلاعاتی و ارتباط با 
+        آنها</OPTION> <OPTION value=10>- مسائل و مشکلات در ارتباط با SQL 
+        Server</OPTION> <OPTION value=11>- مقالات، نکته ها و ترفندها در SQL 
+        Server</OPTION> <OPTION value=19>- مشکلات ارتباط با بانک های اطلاعاتی - 
+        ADO.net</OPTION> <OPTION value=81>- مقالات، نکته ها و ترفندها در 
+        ADO.net</OPTION> <OPTION value="">ابزارها و کامپوننت ها</OPTION> <OPTION 
+        value=66>- ابزارهای گزارشگیری (Crystal Report و ...)</OPTION> <OPTION 
+        value=51>- معرفی ابزارها و کامپوننتهای برنامه نویسی .net</OPTION> 
+        <OPTION value=52>- بحث و گفتگو و رفع اشکال ابزارها و کامپوننت 
+        ها</OPTION> <OPTION value="">مجله و کتاب</OPTION> <OPTION value=79>- 
+        کتابهای کامپیوتری</OPTION> <OPTION value=50>- مقالات، مجلات و کتب 
+        دیگر</OPTION> <OPTION value="">مباحث نرم افزاری متفرقه</OPTION> <OPTION 
+        value=38>- معرفی ابزارها و برنامه های کاربردی تحت MS Windows</OPTION> 
+        <OPTION value=39>- بحث های نرم افزاری و مباحث ديگر IT</OPTION> <OPTION 
+        value="">برنامه نویسی موبایل</OPTION> <OPTION value=84>- برنامه نویسی 
+        موبایل</OPTION></SELECT> </TD></TR>
+  <TR>
+    <TD class=smallfont vAlign=top align=right>شما <B>نمی توانید</B> در این 
+      انجمن پست جدید ارسال کنید. <BR>شما <B>می توانید</B> در این انجمن به تاپیک 
+      ها پاسخ دهید. <BR>شما <B>نمی توانید</B> در این انجمن پستهایتان را حذف 
+      کنید. <BR>شما <B>نمی توانید</B> در این انجمن پستهایتان را ویرایش کنید. 
+      <BR>شما <B>نمی توانید</B> در این انجمن نظرسنجی ایجاد کنید. <BR>شما <B>می 
+      توانید</B> در این انجمن در نظرسنجی ها رای بدهید. 
+<BR></TD></TR></TBODY></TABLE><INPUT id=forum__ctl0_scrollLeft type=hidden 
+name=forum:_ctl0:scrollLeft><INPUT id=forum__ctl0_scrollTop type=hidden 
+name=forum:_ctl0:scrollTop> <IMG style="DISPLAY: none" alt="" 
+src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/plus.gif"> 
+
+<DIV id=dvWaite dir=ltr 
+style="BORDER-RIGHT: #000000 2px solid; BORDER-TOP: #000000 2px solid; FONT-SIZE: 10pt; LEFT: -6px; VISIBILITY: hidden; BORDER-LEFT: #000000 2px solid; WIDTH: 200px; BORDER-BOTTOM: #000000 2px solid; FONT-FAMILY: Tahoma,Arial; POSITION: absolute; TOP: 0px; HEIGHT: 104px; BACKGROUND-COLOR: #ffffff" 
+align=center>
+<P>&nbsp;</P>
+<P><SPAN id=forum__ctl0_lblWaite>لطفا چند لحظه صبر نمائید</SPAN> &nbsp;<IMG 
+height=16 alt="" 
+src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/spinner.gif" 
+width=16></P></DIV>
+<P style="FONT-SIZE: 7pt; TEXT-ALIGN: center">RSS اصلي انجمن : <A 
+href="http://p2p.dotnetsource.com/Default.aspx?g=rsstopic&amp;pg=forum"><IMG 
+alt=RSS 
+src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/rss.gif" 
+valign="absmiddle"></A><BR><BR><LINK id=RSSLink title=Topics 
+href="/Default.aspx?g=rsstopic&amp;pg=forum" type=application/rss+xml 
+rel=alternate><SPAN id=themecredit style="COLOR: #999999">YAFPro Theme Created 
+by Jaben Cargman (<A href="http://www.tinygecko.com/">Tiny 
+Gecko</A>)</SPAN><BR>این انجمن با استفاده از <A 
+title="Yet Another Forum.net Home Page" href="http://www.yetanotherforum.net/" 
+target=_top>Yet Another Forum.net</A>، نسخه 1.9.0 NET v2.0 - ۱۳۸۵/۷/۱۸ کار می 
+کند</P>&nbsp; <!-- yaf.controls.SmartScroller ASP.NET Generated Code -->
+<SCRIPT language=javascript>
+<!--
+
+  function yaf_GetForm()
+  {
+    var theform;
+    if (window.navigator.appName.toLowerCase().indexOf("microsoft") > -1)
+    {
+	  theform = document._ctl0;
+	}
+	else {
+	  theform = document.forms["_ctl0"];
+    }
+    return theform;
+  }
+
+  function yaf_SmartScroller_GetCoords()
+  {
+    var scrollX, scrollY;
+    if (document.all)
+    {
+      if (!document.documentElement.scrollLeft)
+        scrollX = document.body.scrollLeft;
+      else
+        scrollX = document.documentElement.scrollLeft;
+
+      if (!document.documentElement.scrollTop)
+        scrollY = document.body.scrollTop;
+      else
+        scrollY = document.documentElement.scrollTop;
+    }
+    else
+    {
+      scrollX = window.pageXOffset;
+      scrollY = window.pageYOffset;
+    }
+	var cForm = yaf_GetForm();
+    cForm.forum__ctl0_scrollLeft.value = scrollX;
+    cForm.forum__ctl0_scrollTop.value = scrollY;
+  }
+
+  function yaf_SmartScroller_Scroll()
+  {
+    var cForm = yaf_GetForm();
+    var x = cForm.forum__ctl0_scrollLeft.value;
+    var y = cForm.forum__ctl0_scrollTop.value;
+		if (x || y) window.scrollTo(x, y);
+		if (oldOnLoad != null) oldOnLoad();
+  }
+	
+	var oldOnLoad = window.onload;
+  
+  window.onload = yaf_SmartScroller_Scroll;
+  window.onscroll = yaf_SmartScroller_GetCoords;
+  window.onclick = yaf_SmartScroller_GetCoords;
+  window.onkeypress = yaf_SmartScroller_GetCoords;
+// -->
+</SCRIPT>
+<!-- End yaf.controls.SmartScroller ASP.NET Generated Code -->
+<TABLE class=content id=forum:_ctl0:MyTestMenu 
+style="BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 0px; Z-INDEX: 100; LEFT: 0px; VISIBILITY: hidden; PADDING-BOTTOM: 0px; BORDER-LEFT: #ffffff 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 1px solid; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: #ffffff" 
+cellSpacing=0 cellPadding=4 width="1%" border=0>
+  <TBODY>
+  <TR>
+    <TD class=post onmouseover=mouseHover(this,true) 
+    onclick="javascript:__doPostBack('forum:_ctl0:MyTestMenu','watch')" 
+    onmouseout=mouseHover(this,false)><NOBR>این تاپیک را زیر نظر مي 
+    گيرم</NOBR></TD></TR>
+  <TR>
+    <TD class=post onmouseover=mouseHover(this,true) 
+    onclick="javascript:__doPostBack('forum:_ctl0:MyTestMenu','rssfeed')" 
+    onmouseout=mouseHover(this,false)><NOBR>RSS Feed</NOBR></TD></TR>
+  <TR>
+    <TD class=post onmouseover=mouseHover(this,true) 
+    onclick="javascript:__doPostBack('forum:_ctl0:MyTestMenu','email')" 
+    onmouseout=mouseHover(this,false)><NOBR>این تاپیک را ایمیل مي 
+  کنم</NOBR></TD></TR>
+  <TR>
+    <TD class=post onmouseover=mouseHover(this,true) 
+    onclick="javascript:__doPostBack('forum:_ctl0:MyTestMenu','print')" 
+    onmouseout=mouseHover(this,false)><NOBR>اين تاپيک را چاپ مي 
+  کنم</NOBR></TD></TR></TBODY></TABLE>
+<TABLE class=content id=forum:_ctl0:ViewMenu 
+style="BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 0px; Z-INDEX: 100; LEFT: 0px; VISIBILITY: hidden; PADDING-BOTTOM: 0px; BORDER-LEFT: #ffffff 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 1px solid; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: #ffffff" 
+cellSpacing=0 cellPadding=4 width="1%" border=0>
+  <TBODY>
+  <TR>
+    <TD class=post onmouseover=mouseHover(this,true) 
+    onclick="javascript:__doPostBack('forum:_ctl0:ViewMenu','threaded')" 
+    onmouseout=mouseHover(this,false)><NOBR>Threaded</NOBR></TD></TR>
+  <TR>
+    <TD class=post onmouseover=mouseHover(this,true) 
+    onclick="javascript:__doPostBack('forum:_ctl0:ViewMenu','normal')" 
+    onmouseout=mouseHover(this,false)><NOBR>معمولی</NOBR></TD></TR></TBODY></TABLE></FORM>
+<CENTER><!-- PersianStat --><!-- URL: http://www.dotnetsource.com/fa/forum/default.aspx -->
+<SCRIPT language=JavaScript 
+src="آپلود و گذاشتن عكس در تاپيك با fckeditor - سوالات، مشکلات و راه حل ها در ASP_Net - دات نت سورس_files/stat.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=JavaScript type=text/javascript>
+                 persianstat(10023844, 0);
+        </SCRIPT>
+<!-- /PersianStat --></CENTER></BODY></HTML>

@@ -1,0 +1,180 @@
+BODY {
+	FONT-SIZE: 11px; COLOR: #3b3b3b; FONT-FAMILY: Tahoma, Arial
+}
+TD {
+	FONT-SIZE: 11px; COLOR: #3b3b3b; FONT-FAMILY: Tahoma, Arial
+}
+INPUT {
+	BORDER-RIGHT: #e3e3e3 1px solid; BORDER-TOP: #e3e3e3 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #e3e3e3 1px solid; COLOR: #3b3b3b; BORDER-BOTTOM: #e3e3e3 1px solid; FONT-FAMILY: Tahoma, Arial; BACKGROUND-COLOR: #ffffff
+}
+SELECT {
+	BORDER-RIGHT: #e3e3e3 1px solid; BORDER-TOP: #e3e3e3 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #e3e3e3 1px solid; COLOR: #3b3b3b; BORDER-BOTTOM: #e3e3e3 1px solid; FONT-FAMILY: Tahoma, Arial; BACKGROUND-COLOR: #ffffff
+}
+IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+TR.header1 {
+	PADDING-LEFT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 11pt; BACKGROUND-IMAGE: url(titleBack.gif); COLOR: #ffffff
+}
+TR.header1 A {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+TR.header1 A:hover {
+	COLOR: #eeffee; TEXT-DECORATION: underline
+}
+TD.header1 {
+	PADDING-LEFT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 11pt; BACKGROUND-IMAGE: url(titleBack.gif); COLOR: #ffffff; HEIGHT: 40px
+}
+.header1Title {
+	PADDING-LEFT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 11pt; BACKGROUND-IMAGE: url(titleBack.gif); COLOR: #ffffff; HEIGHT: 40px
+}
+TR.header2 {
+	FONT-WEIGHT: bold; COLOR: #55a055; BACKGROUND-COLOR: #e3e3e3
+}
+TD.header2 {
+	FONT-WEIGHT: bold; COLOR: #5555a0; BACKGROUND-COLOR: #e3e3e3
+}
+TD.header2 A {
+	COLOR: #000090; TEXT-DECORATION: none
+}
+TD.header2 A:link {
+	COLOR: #7f7f7f; TEXT-DECORATION: none
+}
+TD.header2 A:visited {
+	COLOR: #7f7f7f; TEXT-DECORATION: none
+}
+TD.header2 A:active {
+	COLOR: #7f7f7f; TEXT-DECORATION: none
+}
+TD.header2 A:hover {
+	COLOR: #7f7f7f; TEXT-DECORATION: underline
+}
+TD.infoTable {
+	BORDER-RIGHT: #f2f2f2 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #f2f2f2 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; BORDER-LEFT: #f2f2f2 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #f2f2f2 1px solid; BACKGROUND-COLOR: #fafafa
+}
+.content A {
+	COLOR: #001090; TEXT-DECORATION: none
+}
+.content A:hover {
+	COLOR: #001090; TEXT-DECORATION: underline
+}
+.footer1 {
+	FONT-SIZE: 7pt; HEIGHT: 28px; BACKGROUND-COLOR: #f4f4f4
+}
+.footer1 SELECT {
+	FONT-SIZE: 10px
+}
+.footer1 TD {
+	FONT-SIZE: 10px
+}
+.forumheading {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt
+}
+A.post_link {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+.postheader {
+	BACKGROUND-COLOR: #f0f0f0
+}
+.postheader A {
+	FONT-SIZE: 11pt; COLOR: black
+}
+.post {
+	BACKGROUND-COLOR: #f5f5f5
+}
+.post_alt {
+	BACKGROUND-COLOR: #fafafa
+}
+TR.post:hover {
+	BACKGROUND-COLOR: #ffffff
+}
+TR.post_alt:hover {
+	BACKGROUND-COLOR: #ffffff
+}
+.postfooter {
+	BACKGROUND-COLOR: #cdcdcd
+}
+.postsep {
+	BACKGROUND-COLOR: #3a3b5a
+}
+.content {
+	BORDER-RIGHT: #777777 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #777777 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #777777 1px solid; COLOR: #000000; PADDING-TOP: 0px; BORDER-BOTTOM: #777777 1px solid
+}
+.postformheader {
+	FONT-WEIGHT: bold; BACKGROUND-COLOR: #eeeeee
+}
+TABLE.content TD {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px
+}
+.quote {
+	PADDING-LEFT: 16px; MARGIN: 5px
+}
+.innerquote {
+	BORDER-RIGHT: #808080 1px dashed; PADDING-RIGHT: 4px; BORDER-TOP: #808080 1px dashed; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; BORDER-LEFT: #808080 1px dashed; PADDING-TOP: 4px; BORDER-BOTTOM: #808080 1px dashed; BACKGROUND-COLOR: #fefefe
+}
+.code {
+	PADDING-LEFT: 16px; MARGIN: 5px
+}
+.innercode {
+	BORDER-RIGHT: #808080 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #808080 1px solid; PADDING-LEFT: 4px; FONT-SIZE: 8pt; PADDING-BOTTOM: 4px; BORDER-LEFT: #808080 1px solid; COLOR: #000000; PADDING-TOP: 4px; BORDER-BOTTOM: #808080 1px solid; FONT-FAMILY: Courier New,Courier; BACKGROUND-COLOR: #efefef
+}
+.smallfont {
+	FONT-SIZE: 10px
+}
+.largefont {
+	FONT-SIZE: 11px
+}
+A.imagelink {
+	FONT-WEIGHT: bold; COLOR: #000000
+}
+A.imagelink:hover {
+	TEXT-DECORATION: none
+}
+.posteditor {
+	WIDTH: 100%; HEIGHT: 200px
+}
+TABLE.command {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+.navlinks {
+	FONT-WEIGHT: bold; COLOR: #000000
+}
+.navlinks A {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.navlinks A:hover {
+	COLOR: #666666
+}
+TABLE.print {
+	BORDER-RIGHT: #c0c0c0 1px solid; BORDER-TOP: #c0c0c0 1px solid; BORDER-LEFT: #c0c0c0 1px solid; BORDER-BOTTOM: #c0c0c0 1px solid
+}
+.printheader {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; COLOR: #000000; PADDING-TOP: 4px; BACKGROUND-COLOR: #dddddd
+}
+.printbody {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; COLOR: #000000; PADDING-TOP: 4px; BACKGROUND-COLOR: #ffffff
+}
+.pbutton {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-WEIGHT: bold; FONT-SIZE: 10px; BORDER-LEFT: medium none; COLOR: #ffffff; BORDER-BOTTOM: medium none; BACKGROUND-COLOR: #3b3b3b
+}
+.textfield {
+	BORDER-RIGHT: #3b3b3b 1px solid; BORDER-TOP: #3b3b3b 1px solid; BORDER-LEFT: #3b3b3b 1px solid; WIDTH: 100%; BORDER-BOTTOM: #3b3b3b 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.ButtonOut {
+	BORDER-RIGHT: #669966 1px solid; BORDER-TOP: #669966 1px solid; BORDER-LEFT: #669966 1px solid; BORDER-BOTTOM: #669966 1px solid
+}
+.ButtonOver {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.ButtonChecked {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.ButtonOff {
+	BORDER-RIGHT: #669966 1px solid; BORDER-TOP: #669966 1px solid; BORDER-LEFT: #669966 1px solid; BORDER-BOTTOM: #669966 1px solid
+}
+#bbcodeFeatures {
+	BORDER-RIGHT: #eeffee 1px solid; BORDER-TOP: #eeffee 1px solid; BORDER-LEFT: #eeffee 1px solid; BORDER-BOTTOM: #eeffee 1px solid
+}
+DIV.postdiv {
+	MIN-HEIGHT: 100px; OVERFLOW: auto; WIDTH: 100%
+}

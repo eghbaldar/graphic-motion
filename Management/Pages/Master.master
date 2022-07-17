@@ -1,0 +1,174 @@
+﻿<%@ Master Language="VB" CodeFile="Master.master.vb" Inherits="Management_Pages_Master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Main.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <h2>
+        CMS Management</h2>
+    <br />
+    Menus:
+    <br />
+    <asp:LoginName ID="LoginName1" runat="server" />
+    <br />
+    <asp:LoginStatus ID="LoginStatus1" runat="server" LoginText="" LogoutText="خروج از مدیریت" />
+    <div id="divTOP">
+        <table class="style1">
+            <tr>
+                <td>
+                    <asp:ImageButton ID="btnShow" runat="server" ImageUrl="~/Content/img/cms_mnu_home.png" />
+                </td>
+                <td>
+                    &nbsp;
+                    <asp:ImageButton ID="btnCategory_" runat="server" ImageUrl="~/Content/img/cms_mnu_category.png" />
+                </td>
+                <td>
+                    &nbsp;
+                    <asp:ImageButton ID="btnLearning_" runat="server" ImageUrl="~/Content/img/cms_mnu_post.png" />
+                </td>
+                <td>
+                    <asp:ImageButton ID="btnComment_" runat="server" ImageUrl="~/Content/img/cms_mnu_comment.png" />
+                    <asp:Label ID="lblUnreadComment" runat="server"></asp:Label>
+                </td>
+                <td>
+                    &nbsp;<asp:ImageButton ID="btnEditDeleteShow_" runat="server" ImageUrl="~/Content/img/cms_mnu_showEdit.png" />
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;<asp:ImageButton ID="btnStatistic" runat="server" ImageUrl="~/Content/img/cms_mnu_statistic.png" />
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Content/img/cms_mnu_request.png" />
+                    <asp:Label ID="lblUnreadContact" runat="server"></asp:Label>
+                </td>
+                <td>
+                    <a href="../../sitemap.aspx" target="_blank">
+                        <img src="../../Content/img/cms_mnu_sitemap.png" border="0" />
+                    </a>
+                </td>
+                <td>
+                    <a href="user.aspx">
+                        <img src="../../Content/img/cms_mnu_user.png" border="0" />
+                    </a>
+                </td>
+                <td>
+                    &nbsp;
+                    <asp:ImageButton ID="ImageButton2" runat="server" 
+                        ImageUrl="~/Content/img/cms_mnu_shop.png" />
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+        </table>
+    </div>
+    Contents:
+    <div id="divDOWN">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
+</h2>

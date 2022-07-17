@@ -1,0 +1,346 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0076)http://docs.fckeditor.net/FCKeditor_2.x/Developers_Guide/Integration/ASP.NET -->
+<HTML lang=en dir=ltr xml:lang="en" 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>ASP.NET - FCKeditor Docs</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META content="FCKeditor 2.x/Developers Guide/Integration/ASP.NET" 
+name=keywords><LINK href="/favicon.ico" rel="shortcut icon"><LINK 
+title="FCKeditor Docs (English)" href="/opensearch_desc.php" 
+type=application/opensearchdescription+xml rel=search><LINK 
+title="FCKeditor Docs RSS Feed" 
+href="http://docs.fckeditor.net/index.php?title=Special:Recentchanges&amp;feed=rss" 
+type=application/rss+xml rel=alternate><LINK title="FCKeditor Docs Atom Feed" 
+href="http://docs.fckeditor.net/index.php?title=Special:Recentchanges&amp;feed=atom" 
+type=application/atom+xml rel=alternate>
+<STYLE type=text/css media="screen, projection">@import url( /skins/common/shared.css?116 );
+@import url( /skins/fckeditor/main.css?116 );
+</STYLE>
+<LINK media=print href="ASP_NET - FCKeditor Docs_files/commonPrint.css" 
+type=text/css rel=stylesheet><!--[if lt IE 5.5000]><style type="text/css">@import "/skins/fckeditor/IE50Fixes.css?116";</style><![endif]--><!--[if IE 5.5000]><style type="text/css">@import "/skins/fckeditor/IE55Fixes.css?116";</style><![endif]--><!--[if IE 6]>
+<STYLE type=text/css>@import url( /skins/fckeditor/IE60Fixes.css?116 );
+</STYLE>
+<![endif]--><!--[if IE 7]><style type="text/css">@import "/skins/fckeditor/IE70Fixes.css?116";</style><![endif]--><!--[if lt IE 7]>
+<SCRIPT src="ASP_NET - FCKeditor Docs_files/IEFixes.js" 
+type=text/javascript></SCRIPT>
+
+<META http-equiv=imagetoolbar content=no><![endif]-->
+<SCRIPT type=text/javascript>/*<![CDATA[*/
+var skin = "fckeditor";
+var stylepath = "/skins";
+var wgArticlePath = "/$1";
+var wgScriptPath = "";
+var wgScript = "/index.php";
+var wgServer = "http://docs.fckeditor.net";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "FCKeditor_2.x/Developers_Guide/Integration/ASP.NET";
+var wgTitle = "FCKeditor 2.x/Developers Guide/Integration/ASP.NET";
+var wgAction = "view";
+var wgRestrictionEdit = [];
+var wgRestrictionMove = [];
+var wgArticleId = "401";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "en";
+var wgContentLanguage = "en";
+var wgBreakFrames = false;
+var wgCurRevisionId = "1985";
+var wgVersion = "1.12.0";
+var wgEnableAPI = true;
+var wgEnableWriteAPI = false;
+/*]]>*/</SCRIPT>
+
+<SCRIPT src="ASP_NET - FCKeditor Docs_files/wikibits.js" type=text/javascript><!-- wikibits js --></SCRIPT>
+
+<SCRIPT src="ASP_NET - FCKeditor Docs_files/index.php" type=text/javascript><!-- site js --></SCRIPT>
+
+<STYLE type=text/css>@import url( /index.php?title=MediaWiki:Common.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000 );
+@import url( /index.php?title=MediaWiki:Fckeditor.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000 );
+@import url( /index.php?title=-&action=raw&gen=css&maxage=18000 );
+</STYLE>
+<!-- Head Scripts -->
+<SCRIPT src="ASP_NET - FCKeditor Docs_files/ajax.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY 
+class="mediawiki ns-0 ltr page-FCKeditor_2_x_Developers_Guide_Integration_ASP_NET"><!-- FCKeditor : Head : Start -->
+<DIV class=fck_main_head>
+<H1><A title="FCKeditor Home" href="http://docs.fckeditor.net/">FCKeditor</A> 
+</H1>
+<UL class=fck_top_menu>
+  <LI><A title="Home Page" href="http://www.fckeditor.net/">FCKeditor Home</A>
+  <LI><A title="FCKeditor Demo" href="http://www.fckeditor.net/demo">Demo</A>
+  <LI><A title="FCKeditor Download" 
+  href="http://www.fckeditor.net/download">Download</A>
+  <LI><A class=active title="FCKeditor Documentation Site" 
+  href="http://docs.fckeditor.net/">Docs</A>
+  <LI><A title="FCKeditor License Options" 
+  href="http://www.fckeditor.net/license">License</A>
+  <LI><A title="Support Options" 
+  href="http://www.fckeditor.net/support">Support</A>
+  <LI><A title=Forums href="http://www.fckeditor.net/forums/">Forums</A>
+  <LI><A title=Extras! 
+href="http://www.fckeditor.net/extras">Extras!</A></LI></UL></DIV><!-- FCKeditor : Head : End -->
+<DIV id=globalWrapper>
+<DIV id=column-content>
+<DIV id=content><A id=top name=top></A>
+<H1 class=firstHeading>ASP.NET Integration</H1>
+<DIV id=bodyContent>
+<H3 id=siteSub>From FCKeditor Docs</H3>
+<DIV id=contentSub><SPAN class=subpages>&lt; <A title="FCKeditor 2.x" 
+href="http://docs.fckeditor.net/FCKeditor_2.x">FCKeditor 2.x</A> | <A 
+title="FCKeditor 2.x/Developers Guide" 
+href="http://docs.fckeditor.net/FCKeditor_2.x/Developers_Guide">Developers 
+Guide</A></SPAN></DIV>
+<DIV id=jump-to-nav>Jump to: <A 
+href="http://docs.fckeditor.net/FCKeditor_2.x/Developers_Guide/Integration/ASP.NET#column-one">navigation</A>, 
+<A 
+href="http://docs.fckeditor.net/FCKeditor_2.x/Developers_Guide/Integration/ASP.NET#searchInput">search</A></DIV><!-- start content -->
+<P>It is very easy to use FCKeditor in your ASP.NET web pages. Just follow these 
+steps. </P>
+<TABLE class=toc id=toc summary=Contents>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV id=toctitle>
+      <H2>Contents</H2></DIV>
+      <UL>
+        <LI class=toclevel-1><A 
+        href="http://docs.fckeditor.net/FCKeditor_2.x/Developers_Guide/Integration/ASP.NET#Configuring_your_site"><SPAN 
+        class=tocnumber>1</SPAN> <SPAN class=toctext>Configuring your 
+        site</SPAN></A> 
+        <UL>
+          <LI class=toclevel-2><A 
+          href="http://docs.fckeditor.net/FCKeditor_2.x/Developers_Guide/Integration/ASP.NET#Step_1"><SPAN 
+          class=tocnumber>1.1</SPAN> <SPAN class=toctext>Step 1</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="http://docs.fckeditor.net/FCKeditor_2.x/Developers_Guide/Integration/ASP.NET#Step_2"><SPAN 
+          class=tocnumber>1.2</SPAN> <SPAN class=toctext>Step 2</SPAN></A> 
+        </LI></UL>
+        <LI class=toclevel-1><A 
+        href="http://docs.fckeditor.net/FCKeditor_2.x/Developers_Guide/Integration/ASP.NET#Integration"><SPAN 
+        class=tocnumber>2</SPAN> <SPAN class=toctext>Integration</SPAN></A> 
+        <UL>
+          <LI class=toclevel-2><A 
+          href="http://docs.fckeditor.net/FCKeditor_2.x/Developers_Guide/Integration/ASP.NET#Step_1_2"><SPAN 
+          class=tocnumber>2.1</SPAN> <SPAN class=toctext>Step 1</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="http://docs.fckeditor.net/FCKeditor_2.x/Developers_Guide/Integration/ASP.NET#Step_2_2"><SPAN 
+          class=tocnumber>2.2</SPAN> <SPAN class=toctext>Step 2</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="http://docs.fckeditor.net/FCKeditor_2.x/Developers_Guide/Integration/ASP.NET#Sample_Code"><SPAN 
+          class=tocnumber>2.3</SPAN> <SPAN class=toctext>Sample Code</SPAN></A> 
+          </LI></UL>
+        <LI class=toclevel-1><A 
+        href="http://docs.fckeditor.net/FCKeditor_2.x/Developers_Guide/Integration/ASP.NET#Additional_information"><SPAN 
+        class=tocnumber>3</SPAN> <SPAN class=toctext>Additional 
+        information</SPAN></A> </LI></UL>
+      <UL></UL></TD></TR></TBODY></TABLE>
+<SCRIPT type=text/javascript> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </SCRIPT>
+<A name=Configuring_your_site></A>
+<H2><SPAN class=mw-headline>Configuring your site </SPAN></H2><A 
+name=Step_1></A>
+<H3><SPAN class=mw-headline>Step 1 </SPAN></H3>
+<P>First step you should take in order to integrate FCKeditor with ASP.NET 
+environment is downloading the FCKeditor .Net package from our dowlnoad site. 
+You can find the latest version of the package under this address: </P>
+<P><A class="external free" title=http://www.fckeditor.net/download 
+href="http://www.fckeditor.net/download" 
+rel=nofollow>http://www.fckeditor.net/download</A> </P>
+<P><B>Note:</B> The main code is not included in this package, just the ASP.NET 
+Control. You still need the FCKeditor scripts to be able to run it, so you 
+should download it as well </P><A name=Step_2></A>
+<H3><SPAN class=mw-headline>Step 2 </SPAN></H3>
+<P>Unpack the downloaded file. There you will find the original source code of 
+the control and a compiled version of it. The file is called 
+<B>FredCK.FCKeditorV2.dll</B>. You can find it in two catalogs: </P>
+<UL>
+  <LI><B>bin/Release/1.1/</B> - the version designed for ASP.NET 1.1 
+  <LI><B>bin/Release/2.0/</B> - the version designed for ASP.NET 2.0 </LI></UL>
+<P>You most probably will not need to make changes in the source, so just 
+consider the compiled DLL file, and just create a reference to it in your 
+project. You have two options to do that: </P>
+<OL>
+  <LI>Manually copy the FredCK.FCKeditorV2.dll file to the "bin" directory of 
+  your web site. 
+  <LI>Right-click "References" in your Visual Studio.NET project in the 
+  "Solution Explorer". Use "Browse" to select the FredCK.FCKeditorV2.dll file 
+  from the directory you have saved it in. </LI></OL>
+<P>You can include the control in your Visual Studio.NET controls toolbox. Just 
+right-click on it and select "Choose Items". Then, just point to the 
+FredCK.FCKeditorV2.dll file by using the "Browse" option. Remember to make sure 
+that you have the latest version of the dll. It may be worthwhile to recompile 
+from the source if you are having issues getting the upload and connector 
+features to work. </P><A name=Integration></A>
+<H2><SPAN class=mw-headline>Integration </SPAN></H2><A name=Step_1_2></A>
+<H3><SPAN class=mw-headline>Step 1 </SPAN></H3>
+<P>Now the editor is ready to be used in your site, so just create an ASP.NET 
+page. To create an instance of the editor, you have two options: </P>
+<OL>
+  <LI>Drag and drop the control "FCKeditor" from the toolbox to you page.(this 
+  method will only work if you included the "FCKeditor" control in the toolbox - 
+  see Step 2 for the description) 
+  <LI>Manually add lines of code in your ASP.NET source page: </LI></OL>
+<UL>
+  <LI>Include this line in the top of the page: </LI></UL><PRE>&lt;%@ Register Assembly="FredCK.FCKeditorV2" Namespace="FredCK.FCKeditorV2" TagPrefix="FCKeditorV2"&nbsp;%&gt;</PRE>
+<UL>
+  <LI>Add the editor tag inside the &lt;form runat="server"&gt;: </LI></UL><PRE>&lt;FCKeditorV2:FCKeditor ID="FCKeditor1" runat="server"&gt;&lt;/FCKeditorV2:FCKeditor&gt;</PRE><A 
+name=Step_2_2></A>
+<H3><SPAN class=mw-headline>Step 2 </SPAN></H3>
+<P>The editor is now ready to be used. Just open the page in your browser to see 
+it at work.<BR></P><A name=Sample_Code></A>
+<H3><SPAN class=mw-headline>Sample Code </SPAN></H3><PRE>&lt;%@ Page Language="C#"%&gt;
+
+&lt;%@ Register Assembly="FredCK.FCKeditorV2" Namespace="FredCK.FCKeditorV2" TagPrefix="FCKeditorV2"&nbsp;%&gt;
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;
+&lt;head runat="server"&gt;
+&lt;title&gt;Sample Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form id="form1" runat="server"&gt;
+
+&lt;FCKeditorV2:FCKeditor ID="FCKeditor1" runat="server"&gt;
+&lt;/FCKeditorV2:FCKeditor&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+&lt;input type="submit" value="Submit" runat="server" /&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</PRE><A name=Additional_information></A>
+<H2><SPAN class=mw-headline>Additional information </SPAN></H2>
+<UL>
+  <LI>You can find some samples on how to use the editor in the "_samples/aspx" 
+  directory of the FCKeditor.Net distribution package. To install the samples, 
+  just copy that directory to the _samples directory found in the FCKeditor core 
+  package installation. </LI></UL><!-- 
+NewPP limit report
+Preprocessor node count: 20/1000000
+Post-expand include size: 65/2097152 bytes
+Template argument size: 0/2097152 bytes
+#ifexist count: 0/100
+--><!-- Saved in parser cache with key fckedit_docs:pcache:idhash:401-0!1!0!!en!2!edit=0 and timestamp 20090301050019 -->
+<DIV class=printfooter>Retrieved from "<A 
+href="http://docs.fckeditor.net/FCKeditor_2.x/Developers_Guide/Integration/ASP.NET">http://docs.fckeditor.net/FCKeditor_2.x/Developers_Guide/Integration/ASP.NET</A>"</DIV><!-- end content -->
+<DIV class=visualClear></DIV></DIV></DIV></DIV>
+<DIV id=column-one>
+<DIV class=portlet id=p-cactions>
+<H5>Views</H5>
+<DIV class=pBody>
+<UL>
+  <LI class=selected id=ca-nstab-main><A title="View the content page [c]" 
+  accessKey=c 
+  href="http://docs.fckeditor.net/FCKeditor_2.x/Developers_Guide/Integration/ASP.NET">Page</A> 
+
+  <LI id=ca-talk><A title="Discussion about the content page [t]" accessKey=t 
+  href="http://docs.fckeditor.net/Talk:FCKeditor_2.x/Developers_Guide/Integration/ASP.NET">Discussion</A> 
+
+  <LI id=ca-viewsource><A 
+  title="This page is protected. You can view its source. [e]" accessKey=e 
+  href="http://docs.fckeditor.net/index.php?title=FCKeditor_2.x/Developers_Guide/Integration/ASP.NET&amp;action=edit">View 
+  source</A> 
+  <LI id=ca-history><A title="Past versions of this page. [h]" accessKey=h 
+  href="http://docs.fckeditor.net/index.php?title=FCKeditor_2.x/Developers_Guide/Integration/ASP.NET&amp;action=history">History</A> 
+  </LI></UL></DIV></DIV>
+<DIV class=portlet id=p-personal>
+<H5>Personal tools</H5>
+<DIV class=pBody>
+<UL>
+  <LI id=pt-login><A 
+  title="You are encouraged to log in, it is not mandatory however. [o]" 
+  accessKey=o 
+  href="http://docs.fckeditor.net/index.php?title=Special:Userlogin&amp;returnto=FCKeditor_2.x/Developers_Guide/Integration/ASP.NET">Log 
+  in / create account</A> </LI></UL></DIV></DIV>
+<SCRIPT type=text/javascript> if (window.isMSIE55) fixalpha(); </SCRIPT>
+
+<DIV class=portlet id=p-Navigation>
+<H5>Navigation</H5>
+<DIV class=pBody>
+<UL>
+  <LI id=n-mainpage><A title="Visit the Main Page [z]" accessKey=z 
+  href="http://docs.fckeditor.net/">Main Page</A> 
+  <LI id=n-recentchanges><A title="The list of recent changes in the wiki. [r]" 
+  accessKey=r href="http://docs.fckeditor.net/Special:Recentchanges">Recent 
+  changes</A> </LI></UL></DIV></DIV>
+<DIV class=portlet id=p-FCKeditor_2.x>
+<H5>FCKeditor 2.x</H5>
+<DIV class=pBody>
+<UL>
+  <LI id=n-Developers.27s-Guide><A 
+  href="http://docs.fckeditor.net/FCKeditor_2.x/Developers_Guide">Developers's 
+  Guide</A> 
+  <LI id=n-User.27s-Guide><A 
+  href="http://docs.fckeditor.net/FCKeditor_2.x/Users_Guide">User's Guide</A> 
+  </LI></UL></DIV></DIV>
+<DIV class=portlet id=p-CKFinder>
+<H5>CKFinder</H5>
+<DIV class=pBody>
+<UL>
+  <LI id=n-Developers.27s-Guide><A 
+  href="http://docs.fckeditor.net/CKFinder/Developers_Guide">Developers's 
+  Guide</A> 
+  <LI id=n-User.27s-Guide><A 
+  href="http://docs.fckeditor.net/CKFinder/Users_Guide">User's Guide</A> 
+</LI></UL></DIV></DIV>
+<DIV class=portlet id=p-search>
+<H5><LABEL for=searchInput>Search</LABEL></H5>
+<DIV class=pBody id=searchBody>
+<FORM id=searchform action=/Special:Search>
+<DIV><INPUT id=searchInput title="Search FCKeditor Docs [f]" accessKey=f 
+name=search> <INPUT class=searchButton id=searchGoButton type=submit value=Go name=go>&nbsp; <INPUT class=searchButton id=mw-searchButton type=submit value=Search name=fulltext> 
+</DIV></FORM></DIV></DIV>
+<DIV class=portlet id=p-tb>
+<H5>Toolbox</H5>
+<DIV class=pBody>
+<UL>
+  <LI id=t-whatlinkshere><A title="List of all wiki pages that link here [j]" 
+  accessKey=j 
+  href="http://docs.fckeditor.net/Special:Whatlinkshere/FCKeditor_2.x/Developers_Guide/Integration/ASP.NET">What 
+  links here</A> 
+  <LI id=t-recentchangeslinked><A 
+  title="Recent changes in pages linked from this page [k]" accessKey=k 
+  href="http://docs.fckeditor.net/Special:Recentchangeslinked/FCKeditor_2.x/Developers_Guide/Integration/ASP.NET">Related 
+  changes</A> 
+  <LI id=t-upload><A title="Upload files [u]" accessKey=u 
+  href="http://docs.fckeditor.net/Special:Upload">Upload file</A> 
+  <LI id=t-specialpages><A title="List of all special pages [q]" accessKey=q 
+  href="http://docs.fckeditor.net/Special:Specialpages">Special pages</A> 
+  <LI id=t-print><A title="Printable version of this page [p]" accessKey=p 
+  href="http://docs.fckeditor.net/index.php?title=FCKeditor_2.x/Developers_Guide/Integration/ASP.NET&amp;printable=yes">Printable 
+  version</A> 
+  <LI id=t-permalink><A title="Permanent link to this version of the page" 
+  href="http://docs.fckeditor.net/index.php?title=FCKeditor_2.x/Developers_Guide/Integration/ASP.NET&amp;oldid=1985">Permanent 
+  link</A> </LI></UL></DIV></DIV></DIV><!-- end of the left (by default at least) column -->
+<DIV class=visualClear></DIV>
+<DIV class=fck_bottom>
+<DIV class=fck_bottomlinks><A href="http://www.fckeditor.net/jobs">Jobs!</A> - 
+<A href="http://www.fckeditor.net/terms">Terms of Use</A> - <A 
+href="http://www.fckeditor.net/privacy">Privacy</A> - <A title="Contact us" 
+href="http://www.fckeditor.net/contact">Contact</A> </DIV>
+<DIV class=copyright>
+<DIV>© 2003 - 2009 Frederico Caldeira Knabben (<A 
+href="http://www.fredck.com/">FredCK.com</A>). All rights reserved. </DIV></DIV>
+<DIV class=fck_bottom_buttons>
+<DIV id=f-poweredbyico><A href="http://www.mediawiki.org/"><IMG 
+alt="Powered by MediaWiki" 
+src="ASP_NET - FCKeditor Docs_files/poweredby_mediawiki_88x31.png"></A></DIV></DIV></DIV>
+<SCRIPT type=text/javascript>if (window.runOnloadHook) runOnloadHook();</SCRIPT>
+</DIV><!-- Served in 0.235 secs. -->
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var pageTracker = _gat._getTracker("UA-271067-3");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+</BODY></HTML>
